@@ -4,11 +4,14 @@ import PropTypes from "prop-types";
 export default function TextForm(props) {
   const [text, setText] = useState("Enter your text2");
   const handleUpConvert = () => {
-    console.log("upcase case was clicked");
-    setText("I am writing in this page");
+    console.log("upcase case was clicked" + text);
+    let newText = text.toUpperCase();
+    setText(newText);
   };
-  const handleOnChange = () => {
+
+  const handleOnChange = (event) => {
     console.log("upcase case was clicked");
+    setText(event.target.value);
   };
 
   return (
